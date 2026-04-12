@@ -6,7 +6,7 @@ from shutil import move, copyfile
 
 from torch.cuda import empty_cache
 from ultralytics import YOLO
-from train26 import run_validation, copy_checkpoint_val
+from train import run_tests, copy_checkpoint_val
 import fnmatch
 from time import sleep
 
@@ -58,7 +58,7 @@ def validate_checkpoints(_architectures, _training_datasets, _testing_datasets, 
                         pt_to_test = os.path.join(checkpoints_dir, f)
                         arch_to_test = f'{a}_{t}_{f_epoch}'
                         if arch_to_test not in complete:
-                            run_validation(arch_to_test, t, test_dataset, results_csv=checkpoint_results_file, _proj="sarship_checkpoints", test_pt=pt_to_test, device=_device)
+                            run_tests(arch_to_test, t, test_dataset, results_csv=checkpoint_results_file, _proj="sarship_checkpoints", test_pt=pt_to_test, device=_device)
                             copy_checkpoint_val(checkpoint_results_file, checkpoint_results_drive)
 
 def cross_validate_26():

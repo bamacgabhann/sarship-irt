@@ -8,11 +8,11 @@ from ultralytics import YOLO
 
 # --- Configuration ---
 architectures = [
-    'yolo26x', 'yolo12x','yolo11x', 'yolov10x', 'yolov9e', 'yolov8x',
-    'yolov8n', 'yolov9t', 'yolov10n', 'yolo11n', 'yolo12n', 'yolo26n',
-    'yolov8s', 'yolov9s', 'yolov10s', 'yolo11s', 'yolo12s', 'yolo26s',
+    'yolov8x', 'yolov9e', 'yolov10x', 'yolo11x', 'yolo12x', 'yolo26x',
+    'yolov8l', 'yolov9c', 'yolov10b', 'yolov10l', 'yolo11l', 'yolo12l', 'yolo26l',
     'yolov8m', 'yolov9m', 'yolov10m', 'yolo11m', 'yolo12m', 'yolo26m',
-    'yolov8l', 'yolov9c', 'yolov10b', 'yolov10l', 'yolo11l', 'yolo12l', 'yolo26l'
+    'yolov8s', 'yolov9s', 'yolov10s', 'yolo11s', 'yolo12s', 'yolo26s',
+    'yolov8n', 'yolov9t', 'yolov10n', 'yolo11n', 'yolo12n', 'yolo26n'
 ]
 
 SSDD_MODEL_PATHS = {}
